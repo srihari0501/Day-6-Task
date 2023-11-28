@@ -1,26 +1,51 @@
-class Circle {
-    constructor(radius) {
-        this.radius = radius;
+class circle{
+    constructor(radius,color)
+    {
+        this.radius=radius;
+        this.color=color;
     }
-    getRadius() {
-        return this.radius;
+    //get radius and color
+    getradius()
+    {
+        return `The radius of the circle is ${this.radius} and its color is ${this.color}`;
     }
-
-    setRadius(radius) {
-        this.radius = radius;
+    //set radius
+    setradius(newradius)
+    {
+        this.radius=newradius;
     }
-
-    calculateArea() {
-        return Math.PI * Math.pow(this.radius, 2);
+    //set color
+    setcolor(newcolor)
+    {
+        this.color=newcolor;
     }
-
-    calculateCircumference() {
-        return 2 * Math.PI * this.radius;
-    }
+    //toString
+    toString()
+{
+    return `"Circle [Radius: ${this.radius}, Color: ${this.color}]"`;
+   
+}
+//Area
+calculateArea()
+{
+     var area=Math.PI*Math.pow(this.radius,2);
+     return `Area of the circle: ${area}`;
+}
+//Circumference
+calculateCircumference()
+{
+    var circumference= 2* Math.PI*this.radius;
+    return `Circumference of the circle: ${circumference}`;
 }
 
-// Example usage
-const myCircle = new Circle(5);
-console.log(myCircle.toString());
-console.log("Area:", myCircle.calculateArea());
-console.log("Circumference:", myCircle.calculateCircumference());
+}
+var circles=new circle("1.0","red");
+console.log(circles.getradius());  
+
+circles.radius="5.0"
+circles.color="blue"
+console.log(circles.radius);
+console.log(circles.color);
+console.log(circles.toString());
+console.log(circles.calculateArea());
+console.log(circles.calculateCircumference());
